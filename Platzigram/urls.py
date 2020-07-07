@@ -27,6 +27,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('hello-world/', local_views.hello_world),
     path('hi/', local_views.hi),
-    path('users/login', users_views.login_view),
-    path('posts/', posts_views.list_posts),
+    path('users/login/', users_views.login_view),
+    path('posts/', posts_views.list_posts, name='feed'),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
